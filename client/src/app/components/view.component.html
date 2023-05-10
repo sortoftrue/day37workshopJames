@@ -1,0 +1,13 @@
+<p>view works!</p>
+
+<form [formGroup]="form" (ngSubmit)="getPost()">
+    <input type="text" formControlName="index">
+    
+    <button type="submit">Find post</button>
+    <button type="button" (click)="getDigitalOcean()">Get from digital Ocean</button>
+</form>
+
+<div *ngIf="imageData">
+    <img width="350" height="350" src="{{imageData}}"/><br>
+    {{comments}}
+</div>

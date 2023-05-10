@@ -1,0 +1,8 @@
+<p>upload works!</p>
+
+<form [formGroup]="form" (ngSubmit)="upload()">
+    <input type="text" formControlName="comments">
+    <input type="file" accept="*" #file formControlName="imageFile">
+    <button type="submit" [disabled]="form.invalid">Upload!</button>
+    <button type="button" (click)="uploadDigitalOcean()" [disabled]="form.invalid">Upload Digital Ocean</button>
+</form>
